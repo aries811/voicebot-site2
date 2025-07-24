@@ -1,5 +1,5 @@
 quart
-whisper
 aiohttp
 python-dotenv
 pydub
+git+https://github.com/openai/whisper.git

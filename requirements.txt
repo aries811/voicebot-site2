@@ -1,1 +1,5 @@
-Flask==2.3.3
+quart
+whisper
+aiohttp
+python-dotenv
+pydub

@@ -10,19 +10,6 @@ from dotenv import load_dotenv
 from pydub import AudioSegment
 import webbrowser
 
-# === 🔧 Налаштування ===
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-FFMPEG_DIR = os.path.join(BASE_DIR, "ffmpeg")
-ffmpeg_path = os.path.join(FFMPEG_DIR, "ffmpeg.exe")
-ffprobe_path = os.path.join(FFMPEG_DIR, "ffprobe.exe")
-AudioSegment.converter = ffmpeg_path
-AudioSegment.ffprobe = ffprobe_path
-
-# === ✅ Перевірка FFmpeg ===
-if not os.path.isfile(ffmpeg_path) or not os.path.isfile(ffprobe_path):
-    print("❌ ERROR: ffmpeg.exe або ffprobe.exe не знайдено в ./ffmpeg/")
-    exit(1)
-
 # === 🔑 Завантаження .env ===
 load_dotenv()
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
